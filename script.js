@@ -1,5 +1,5 @@
 const keyboard = document.querySelector('.keyboard');
-const textarea = document.querySelector('.textarea');
+const textarea = document.getElementById('textarea');
 let capsLock = false;
 
 const arrayKeys = [
@@ -36,7 +36,7 @@ function clickButton(e) {
             if (capsLock) {
                 symbol = symbol.toUpperCase();
             }
-            textarea.textContent += symbol;
+            textarea.value += symbol;
         }
     }
 }
