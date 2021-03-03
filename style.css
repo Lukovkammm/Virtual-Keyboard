@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.textarea {
+    width: 90vw;
+    height: 250px;
+    align-self: center;
+}
+
+.keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+
+    background: #004134;
+    transition: bottom 0.4s;
+}
+
+.keyboard__keys {
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard.upper .keyboard_toUpper {
+    text-transform: uppercase;
+}
+
+.keyboard_hidden {
+    bottom: -100%;
+}
+
+.keyboard__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6%;
+    height: 50px;
+    max-width: 90px;
+    margin: 3px;
+    font-size: 1.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px 0px #000;
+    outline: none;
+    cursor: pointer;
+}
+
+.keyboard_toUpper {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.keyboard__key:hover,
+.keyboard__key:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.keyboard__key_width {
+    width: 12%;
+}
+
+.keyboard__key_extra-width {
+    min-width: 35%;
+}
